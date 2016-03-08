@@ -1,0 +1,54 @@
+*, body {
+	margin:0;
+	padding:0;
+	font-family:'raleway',sans-serif;
+	box-sizing:border-box;
+}
+
+div {
+	box-sizing:border-box;	
+}
+
+
+
+/* 
+Typografi
+*/
+
+/* Heading */
+
+h1,h2,h3,h4,h5,h6 {
+	color:#333;
+	font-weight:300;
+	margin:($headingtext/6) 0;
+}
+
+h1 {
+	font-size:($headingtext / 6 )*6;
+}
+h2 {
+	font-size:($headingtext / 6)*5.5;
+}
+h3 {
+	font-size:($headingtext / 6)*5;
+}
+h4 {
+	font-size:($headingtext / 6)*4.5;
+}
+h5 {
+	font-size:($headingtext / 6)*4;
+}
+h6 {
+	font-size:($headingtext / 6)*3.5;
+}
+
+/* Paragraf */
+
+p {
+	color:#555;
+	font-size:$paragraftext;
+	line-height:150%;
+	margin:15px 0;
+}
+
+

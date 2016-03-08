@@ -1,0 +1,67 @@
+button {
+	margin:6px 0;
+	background:#ccc;
+	padding:14px;
+	border:none;
+	font-family:sans-serif;
+	font-size:15px;
+	color:#fff;
+	letter-spacing:1px;
+	font-weight:600;
+	border-radius: 3px;
+	box-shadow:0 1px 1px 0 #ccc;
+	&:focus {
+		outline:none;
+	}
+
+	&.btn-full {
+		padding:12px;
+		width:100%;
+	}
+	&.outline {
+		background: transparent;
+		border:2px solid #ccc;
+		color:#ccc;
+		box-shadow: none;
+	}
+
+	&.btn-blue {
+		background: $blue;
+		color:#fff;
+		transition: all .01s ease;
+
+		&.outline {
+			background: transparent;
+			border:2px solid $blue;
+			color:$blue;
+
+			&:focus {
+				background: $blue;
+				color:#fff;
+			}
+		}
+	}
+
+	&.btn-red {
+		background: $merah;
+		color:#fff;
+		&.outline {
+			background: transparent;
+			border:2px solid $merah;
+			color:$merah;
+		}
+	}
+
+	&.btn-purple {
+		background:$ungu;
+		color:#fff;
+		&.outline {
+			background:transparent;
+			border:2px solid $ungu;
+			color:$ungu;
+		}
+	}
+
+	
+
+}

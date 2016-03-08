@@ -1,0 +1,54 @@
+// responsive size width
+$opera: 240px;
+$featured: 360px;
+$smartphone: 480px;
+$tablethigh: 768px;
+$netbook: 1024px;
+$laptop: 1366px;
+
+// color setup
+$lightblue: #69D9EC;
+$blue: #2E85F4;
+$ungu: #B094DE;
+$merah: #FF7562;
+$kuning: #F3CF77;
+$pink: #FB90B0;
+$darkblue: #323A45;
+$green: #5BD982;
+
+// size setup
+$paragraftext: 18px;
+$headingtext: 60px;
+
+::selection {
+	background:#AC12D7;
+	color:#fff;
+}
+
+
+// align text
+
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-justify {
+	text-align: justify;
+}
+
+// casetext
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.capitalcase {
+	text-align: capitalize;
+}
+
