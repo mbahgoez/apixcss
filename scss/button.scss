@@ -1,6 +1,30 @@
+	@mixin button-style($color){
+		background: $color;
+		color:#fff;
+		transition: all .1s ease;
+		border:2px solid $color;
+		&:hover {
+			background:darken($color, 5%);
+			border:2px solid darken($color, 5%);
+		}
+
+		&.outline {
+			background: transparent;
+			border:2px solid $color;
+			color:$color;
+
+			&:focus {
+				border:2px solid $color;
+				background: $color;
+				color:#fff;
+			}
+		}
+	}
+
+
 button {
 	margin:6px 0;
-	background:#ccc;
+	background:#999;
 	padding:14px;
 	border:none;
 	font-family:sans-serif;
@@ -9,9 +33,15 @@ button {
 	letter-spacing:1px;
 	font-weight:600;
 	border-radius: 3px;
-	box-shadow:0 1px 1px 0 #ccc;
+	box-shadow:0 1px 1px 0 #999;
+	transition:all .1s ease;
+	&:hover {
+		background:#bbb;
+	}
 	&:focus {
 		outline:none;
+		background:#aaa;
+		color:#fff;
 	}
 
 	&.btn-full {
@@ -20,48 +50,31 @@ button {
 	}
 	&.outline {
 		background: transparent;
-		border:2px solid #ccc;
-		color:#ccc;
+		border:2px solid #999;
+		color:#999;
 		box-shadow: none;
+		&:focus {
+			background:#999;
+			color:#fff;
+		}
 	}
+
 
 	&.btn-blue {
-		background: $blue;
-		color:#fff;
-		transition: all .01s ease;
-
-		&.outline {
-			background: transparent;
-			border:2px solid $blue;
-			color:$blue;
-
-			&:focus {
-				background: $blue;
-				color:#fff;
-			}
-		}
+		@include button-style($blue);
 	}
-
 	&.btn-red {
-		background: $merah;
-		color:#fff;
-		&.outline {
-			background: transparent;
-			border:2px solid $merah;
-			color:$merah;
-		}
+		@include button-style($red);
 	}
-
+	&.btn-yellow {
+		@include button-style($yellow);
+	}
+	&.btn-green {
+		@include button-style($green);
+	}
 	&.btn-purple {
-		background:$ungu;
-		color:#fff;
-		&.outline {
-			background:transparent;
-			border:2px solid $ungu;
-			color:$ungu;
-		}
+		@include button-style($purple);
 	}
-
 	
 
 }

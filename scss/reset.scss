@@ -20,26 +20,71 @@ Typografi
 h1,h2,h3,h4,h5,h6 {
 	color:#333;
 	font-weight:300;
-	margin:($headingtext/6) 0;
+	cursor:default;
 }
 
+
+
+@mixin heading($col, $size, $multi){
+	font-size: ( $size / 6) * $multi;
+	margin:($size / 6) 0;
+}
+
+
 h1 {
-	font-size:($headingtext / 6 )*6;
+	@include heading(6, $headingtext, 6);
+	@include tablet {
+		@include heading(6, $headingtext - 20px, 6);
+	}
+	@include featured {
+		@include heading(6, $headingtext - 30px, 6);
+	}
 }
 h2 {
-	font-size:($headingtext / 6)*5.5;
+	@include heading(5, $headingtext, 5.5);
+	@include tablet {
+		@include heading(5, $headingtext - 20px, 5.5);
+	}
+	@include featured {
+		@include heading(5, $headingtext - 30px, 5.5);
+	}
 }
+
 h3 {
-	font-size:($headingtext / 6)*5;
+	@include heading(4, $headingtext, 5);
+	@include tablet {
+		@include heading(4, $headingtext - 20px, 5);
+	}
+	@include featured {
+		@include heading(4, $headingtext - 30px, 5);
+	}
 }
 h4 {
-	font-size:($headingtext / 6)*4.5;
+	@include heading(3, $headingtext, 4.5);
+		@include tablet {
+			@include heading(3, $headingtext - 20px, 4.5 );
+	}
+	@include featured {
+		@include heading(3, $headingtext - 30px, 4.5);
+	}
 }
 h5 {
-	font-size:($headingtext / 6)*4;
+	@include heading(2, $headingtext, 4);
+		@include tablet {
+			@include heading(2, $headingtext - 20px, 4);
+	}
+	@include featured {
+		@include heading(2, $headingtext - 30px, 4);
+	}
 }
 h6 {
-	font-size:($headingtext / 6)*3.5;
+	@include heading(1, $headingtext, 3.5);
+		@include tablet {
+			@include heading(1, $headingtext - 30px, 3.5);
+	}
+	@include featured {
+		@include heading(1, $headingtext - 30px, 3.5);
+	}
 }
 
 /* Paragraf */
@@ -49,6 +94,18 @@ p {
 	font-size:$paragraftext;
 	line-height:150%;
 	margin:15px 0;
+	@include tablet {
+		font-size:14px;
+	}
+}
+
+
+
+hr {
+	border:1px solid #ccc;
+}
+hr.margin {
+	margin:30px 0;
 }
 
 

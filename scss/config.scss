@@ -2,23 +2,56 @@
 $opera: 240px;
 $featured: 360px;
 $smartphone: 480px;
-$tablethigh: 768px;
-$netbook: 1024px;
+$tablet: 768px;
+$medium: 960px;
+$netbook: 1120px;
+$standart: 1280px;
 $laptop: 1366px;
 
 // color setup
 $lightblue: #69D9EC;
 $blue: #2E85F4;
-$ungu: #B094DE;
-$merah: #FF7562;
-$kuning: #F3CF77;
+$purple: #8219AD;
+$red: #F21E1E;
+$yellow:#EAE015;
 $pink: #FB90B0;
 $darkblue: #323A45;
-$green: #5BD982;
+$green: #00CC29;
 
 // size setup
 $paragraftext: 18px;
 $headingtext: 60px;
+
+
+@mixin netbook {
+	@media (max-width: #{$netbook}){
+		@content;
+	} 
+}
+@mixin standart {
+	@media (max-width: #{$standart}) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (max-width:#{$medium}){
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width:#{$tablet}){
+		@content;
+	}
+}
+
+@mixin featured {
+	@media (max-width:#{$featured}){
+		@content;
+	}
+}
+
 
 ::selection {
 	background:#AC12D7;
@@ -51,4 +84,6 @@ $headingtext: 60px;
 .capitalcase {
 	text-align: capitalize;
 }
-
+.underline {
+	text-decoration: underline;
+}
