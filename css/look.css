@@ -434,7 +434,6 @@ button {
   @media (max-width: 768px) and (max-width: 768px) {
     .container .row .col {
       width: 100%; } }
-
       .container .row .col.lg-8 {
         width: 66.66667%; }
         @media (max-width: 768px) {
@@ -520,5 +519,3 @@ button {
         @media (max-width: 768px) {
           .container .row .col.lg-push-12 {
             left: 0; } }
-
-/*# sourceMappingURL=look.css.map */
